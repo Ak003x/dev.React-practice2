@@ -1,13 +1,19 @@
 import Image from "next/image";
 import '../index.css';
 
+const messages = [
+  "Learn React ⚛️",
+  "Apply for jobs 💼",
+  "Invest your new income 🤑",
+];
+
 
 export default function Home() {
   return (
     <div className="steps">
       <div className="numbers">
 
-        <div>1</div>
+        <div className="active">1</div>
         <div>2</div>
         <div>3</div>
       </div>
@@ -17,8 +23,8 @@ export default function Home() {
 
 
       <div className="buttons">
-        <button>pervious</button>
-        <button>Next</button>
+        <button style={{ background: "#7950f3", color: "#fff" }}>pervious</button>
+        <button style={{ background: "#7950f3", color: "#fff" }}>Next</button>
 
       </div>
     </div>
