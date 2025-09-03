@@ -7,19 +7,21 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
+const step = 3;
+
 
 export default function Home() {
   return (
     <div className="steps">
       <div className="numbers">
 
-        <div className="active">1</div>
-        <div>2</div>
-        <div>3</div>
+        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
+        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
+        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
       </div>
 
 
-      <p className="message">Hello</p>
+      <p className="message">Step {step}: {messages[step - 1]}</p>
 
 
       <div className="buttons">
