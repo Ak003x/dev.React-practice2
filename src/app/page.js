@@ -1,3 +1,6 @@
+
+'use client';
+
 import Image from "next/image";
 import '../index.css';
 
@@ -11,6 +14,14 @@ const step = 3;
 
 
 export default function Home() {
+  const handlePervious = () => {
+    alert("previous")
+  }
+  const handleNext = () => {
+    alert("Next")
+  }
+
+
   return (
     <div className="steps">
       <div className="numbers">
@@ -25,8 +36,8 @@ export default function Home() {
 
 
       <div className="buttons">
-        <button style={{ background: "#7950f3", color: "#fff" }}>pervious</button>
-        <button style={{ background: "#7950f3", color: "#fff" }}>Next</button>
+        <button style={{ background: "#7950f3", color: "#fff" }} onClick={handlePervious} >pervious</button>
+        <button style={{ background: "#7950f3", color: "#fff" }} onClick={handleNext}>Next</button>
 
       </div>
     </div>
