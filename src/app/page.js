@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import '../index.css';
+import { useState } from "react";
 
 const messages = [
   "Learn React ⚛️",
@@ -10,15 +11,19 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
-const step = 3;
+const step = 1;
 
 
 export default function Home() {
+  const [step, setSteps] = useState(1)
+
+
+
   const handlePervious = () => {
-    alert("previous")
+    (step > 1) ? setSteps(step - 1) : "";
   }
   const handleNext = () => {
-    alert("Next")
+    (step < 3) ? setSteps(step + 1) : "";
   }
 
 
