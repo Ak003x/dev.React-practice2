@@ -16,6 +16,7 @@ const step = 1;
 
 export default function Home() {
   const [step, setSteps] = useState(1)
+  // const [test, setTest] = useState({name:"akash"}) using object..
 
 
 
@@ -24,6 +25,7 @@ export default function Home() {
   }
   const handleNext = () => {
     (step < 3) ? setSteps(step + 1) : "";
+    // setTest({name:"ak"}) using object
   }
 
 
@@ -31,13 +33,15 @@ export default function Home() {
     <div className="steps">
       <div className="numbers">
 
-        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
-        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
-        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
+        <div className={step >= 1 ? "active" : ""}>1</div>
+        <div className={step >= 2 ? "active" : ""}>2</div>
+        <div className={step >= 3 ? "active" : ""}>3</div>
       </div>
 
 
-      <p className="message">Step {step}: {messages[step - 1]}</p>
+      <p className="message">Step {step}: {messages[step - 1]}
+        {/* {test.name} */}
+        </p>
 
 
       <div className="buttons">
