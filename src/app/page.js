@@ -11,9 +11,17 @@ const messages = [
   "Invest your new income 🤑",
 ];
 
-
-
 export default function Home() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
+
+
+function Steps() {
   const [step, setSteps] = useState(1)
   const [isOpen, setIsOpen] = useState(true)
   // const [test, setTest] = useState({name:"akash"}) using object..
@@ -31,7 +39,7 @@ export default function Home() {
 
 
   return (
-    <>
+    <div>
       <button className="close" onClick={() => setIsOpen((is) => !is)}>&times;</button>
       {isOpen && (
         <div className="steps">
@@ -53,7 +61,7 @@ export default function Home() {
             <button style={{ background: "#7950f3", color: "#fff" }} onClick={handleNext}>Next</button>
           </div>
         </div>
-      )}</>
+      )}</div>
 
   );
 }
