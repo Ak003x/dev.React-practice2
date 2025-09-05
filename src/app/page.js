@@ -21,17 +21,18 @@ export default function Home() {
 
 
   const handlePervious = () => {
-    (step > 1) ? setSteps(step - 1) : "";
+    if (step > 1) setSteps((s) => s - 1);
   }
   const handleNext = () => {
-    (step < 3) ? setSteps(step + 1) : "";
+    if (step < 3)
+      setSteps((s) => s + 1);
     // setTest({name:"ak"}) using object
   }
 
 
   return (
     <>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>&times;</button>
+      <button className="close" onClick={() => setIsOpen((is) => !is)}>&times;</button>
       {isOpen && (
         <div className="steps">
           <div className="numbers">
