@@ -30,8 +30,8 @@ export default function Home() {
 
 
   return (
-    <div>
-      <button className="close"  onClick={()=>setIsOpen(!isOpen)}>&times;</button>
+    <>
+      <button className="close" onClick={() => setIsOpen(!isOpen)}>&times;</button>
       {isOpen && (
         <div className="steps">
           <div className="numbers">
@@ -52,7 +52,7 @@ export default function Home() {
             <button style={{ background: "#7950f3", color: "#fff" }} onClick={handleNext}>Next</button>
           </div>
         </div>
-      )}</div>
+      )}</>
 
   );
 }
